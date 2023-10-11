@@ -4,8 +4,8 @@ on:
 
 jobs:
   Plan_Dev:
-    if: github.ref == 'refs/heads/develop'
-    uses: RekhuGopal/gitreusableflows/.github/workflows/aws_tf_plan.yml@develop
+    if: github.ref == 'refs/heads/main'
+    uses: susrk/gitreusableflows/.github/workflows/aws_tf_plan.yml@main
     with:
       path: IAMRoles
       tf_vars_file: dev.tfvars
@@ -15,7 +15,7 @@ jobs:
 
   Deploy_Dev:
     needs: Plan_Dev
-    uses: RekhuGopal/gitreusableflows/.github/workflows/aws_tf_appy.yml@develop
+    uses: susrk/gitreusableflows/.github/workflows/aws_tf_appy.yml@main
     with:
       path: IAMRoles
       tf_vars_file: dev.tfvars
@@ -25,7 +25,7 @@ jobs:
 
   Plan_Uat:
     if: github.ref == 'refs/heads/main'
-    uses: RekhuGopal/gitreusableflows/.github/workflows/aws_tf_plan.yml@main
+    uses: susrk/gitreusableflows/.github/workflows/aws_tf_plan.yml@main
     with:
       path: IAMRoles
       tf_vars_file: uat.tfvars
@@ -35,7 +35,7 @@ jobs:
 
   Deploy_Uat:
     needs: Plan_Uat
-    uses: RekhuGopal/gitreusableflows/.github/workflows/aws_tf_appy.yml@main
+    uses: susrk/gitreusableflows/.github/workflows/aws_tf_appy.yml@main
     with:
       path: IAMRoles
       tf_vars_file: uat.tfvars
