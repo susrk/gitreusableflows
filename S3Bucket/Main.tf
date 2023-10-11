@@ -11,7 +11,7 @@ terraform {
   organization = "surabhiterraform1234"
 
     workspaces {
-      name = "AWSBackup"
+      name = "surabhiterraform1234"
     }
   }
 }
