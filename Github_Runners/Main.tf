@@ -10,7 +10,7 @@ terraform {
 		organization = "Surabhiterraform1234"
 
 		workspaces {
-			name = "EKS-Terraform"
+			name = "Surabhiterraform1234"
 		}
 	}
 }
