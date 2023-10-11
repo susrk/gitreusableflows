@@ -7,7 +7,7 @@ terraform {
 
 	backend "remote" {
 		hostname = "app.terraform.io"
-		organization = "CloudQuickLabs"
+		organization = "Surabhiterraform1234"
 
 		workspaces {
 			name = "EKS-Terraform"
